@@ -37,7 +37,7 @@ Tech Stack
 - AI: Groq API (LLaMA / Mixtral models)
 
  Setup (2 minutes)
-
+```
 flashgen/
 ├── server.js        ← Node.js backend (Express)
 ├── .env             ← Your API key goes here
