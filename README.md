@@ -1,48 +1,43 @@
+ FlashGen — AI-Powered PDF to Quiz Generator
 
-# FlashGen — PDF to Quiz App
+Turn boring PDFs into interactive quizzes in seconds.
 
-Upload any PDF and generate Flashcards, MCQ, or Fill-in-the-Blank questions using AI.
-
-## Setup (takes 2 minutes)
-
-### 1. Install Node.js
-Download from https://nodejs.org (get the LTS version)
-
-### 2. Get your Anthropic API key
-- Go to https://console.anthropic.com
-- Sign up (free)
-- Click "API Keys" → "Create Key" → copy it
-
-### 3. Add your API key
-Open the `.env` file and replace `your_api_key_here` with your actual key:
-```
-ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxx...
-```
-
-### 4. Install dependencies
-Open a terminal in this folder and run:
-```
-npm install
-```
-
-### 5. Start the server
-```
-npm start
-```
-
-### 6. Open the app
-Go to http://localhost:3000 in your browser.
+FlashGen is a full-stack AI application that converts study material into flashcards, MCQs, and fill-in-the-blank questions — helping users actively learn instead of passively reading.
 
 ---
 
-## How it works
-1. Drop a PDF → the server extracts the text using `pdf-parse`
-2. The text is sent to Claude AI with a prompt to generate questions
-3. Claude returns structured JSON (flashcards / MCQ / fill-in-blank)
-4. The frontend renders an interactive quiz
+  Features
 
-## Project structure
-```
+- Upload any PDF (notes, textbooks, articles)
+- AI-generated:
+  - Flashcards
+  - Multiple Choice Questions (MCQs)
+  - Fill-in-the-Blanks
+-  Interactive quiz experience
+-  Real-time performance tracking
+-  Clean, modern UI (black & gold aesthetic)
+
+
+---
+
+ How It Works
+
+1. Upload a PDF  
+2. Text is extracted using `pdf-parse`  
+3. AI processes the content and generates structured questions  
+4. The frontend renders an interactive quiz interface  
+
+---
+
+Tech Stack
+
+- Frontend: HTML, CSS, JavaScript  
+- Backend:Node.js, Express  
+- Libraries: Multer, PDF-Parse  
+- AI: Groq API (LLaMA / Mixtral models)
+
+ Setup (2 minutes)
+
 flashgen/
 ├── server.js        ← Node.js backend (Express)
 ├── .env             ← Your API key goes here
