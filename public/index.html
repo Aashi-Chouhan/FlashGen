@@ -516,6 +516,10 @@ function setMode(m){
 
 async function generate(){
   const f=document.getElementById('file').files[0];
+  if(f.size > 4 * 1024 * 1024){
+  alert("PDF too large 😭 (pls reduce it to 4MB)");
+  return;
+}
   if(!f){
     alert("Upload PDF first 😭");
     return;
